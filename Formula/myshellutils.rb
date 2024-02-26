@@ -10,7 +10,7 @@ class Myshellutils < Formula
 
   # depends_on "cmake" => :build
 
-  skip_clean 'bin'
+  #skip_clean 'bin'
 
   def install
     # Remove unrecognized options if they cause configure to fail

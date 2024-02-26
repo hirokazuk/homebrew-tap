@@ -4,7 +4,7 @@
 class Myshellutils < Formula
   desc "myshellutils"
   homepage ""
-  url "https://github.com/hirokazuk/myshellutils/archive/refs/tags/v0.0.5.tar.gz"
+  url "https://github.com/hirokazuk/myshellutils/archive/refs/tags/v0.0.6.tar.gz"
   #sha256 "eace63da50fe1079ed9c7c830b2b03804431b9344acd7bf468f723994b7aecdc"
   license ""
 

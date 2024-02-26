@@ -18,7 +18,7 @@ class Myshellutils < Formula
     # system "./configure", "--disable-silent-rules", *std_configure_args
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     bin.install "bin/testecho.sh" => "testecho"
-    # prefix.install 'bin'
+    prefix.install 'bin'
     # bin.install Dir['bin/*.sh']
     #bin.install 'bin/testecho.sh'
     #prefix.install 'bin'

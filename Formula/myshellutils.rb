@@ -17,7 +17,8 @@ class Myshellutils < Formula
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     # system "./configure", "--disable-silent-rules", *std_configure_args
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
-    bin.install "bin/testecho.sh"
+    #bin.install "bin/testecho.sh"
+    bin.install Dir['bin/*']
     #prefix.install 'bin'
     #(bin+'testecho.sh').chmod 0755
   end

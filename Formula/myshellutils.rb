@@ -4,7 +4,7 @@
 class Myshellutils < Formula
   desc "myshellutils"
   homepage ""
-  url "https://github.com/hirokazuk/myshellutils/archive/refs/tags/v0.0.7.tar.gz"
+  url "https://github.com/hirokazuk/myshellutils/archive/refs/tags/v0.0.9.tar.gz"
   #sha256 "eace63da50fe1079ed9c7c830b2b03804431b9344acd7bf468f723994b7aecdc"
   license ""
 
@@ -17,8 +17,9 @@ class Myshellutils < Formula
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     # system "./configure", "--disable-silent-rules", *std_configure_args
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
-    bin.install "bin/testecho.sh" => "testecho"
-    prefix.install Dir['bin/*']
+    #bin.install "bin/testecho.sh" => "testecho"
+    #prefix.install Dir['bin/*']
+    prefix.install Dir['*']
     # bin.install Dir['bin/*.sh']
     #bin.install 'bin/testecho.sh'
     #prefix.install 'bin'

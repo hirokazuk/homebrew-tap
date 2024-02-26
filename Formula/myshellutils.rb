@@ -4,8 +4,8 @@
 class Myshellutils < Formula
   desc "myshellutils"
   homepage ""
-  url "https://github.com/hirokazuk/myshellutils/archive/refs/tags/v0.0.1.tar.gz"
-  sha256 "eace63da50fe1079ed9c7c830b2b03804431b9344acd7bf468f723994b7aecdc"
+  url "https://github.com/hirokazuk/myshellutils/archive/refs/tags/v0.0.3.tar.gz"
+  #sha256 "eace63da50fe1079ed9c7c830b2b03804431b9344acd7bf468f723994b7aecdc"
   license ""
 
   # depends_on "cmake" => :build
@@ -18,7 +18,8 @@ class Myshellutils < Formula
     # system "./configure", "--disable-silent-rules", *std_configure_args
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     #bin.install "bin/testecho.sh"
-    bin.install Dir['bin/*']
+    #bin.install Dir['bin/*']
+    bin.install 'testecho.sh'
     #prefix.install 'bin'
     #(bin+'testecho.sh').chmod 0755
   end

@@ -10,11 +10,15 @@ class Myshellutils < Formula
 
   # depends_on "cmake" => :build
 
+  skip_clean 'bin'
+
   def install
     # Remove unrecognized options if they cause configure to fail
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     system "./configure", "--disable-silent-rules", *std_configure_args
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    prefix.install 'bin'
+    (bin+'testecho.sh').chmod 0755
   end
 
   test do

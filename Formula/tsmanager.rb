@@ -1,14 +1,15 @@
+
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class Kvcommands < Formula
-  desc "hirokazuk/kv_commands"
-  homepage "https://github.com/hirokazuk/kv_commands"
-  url "https://github.com/hirokazuk/kv_commands/archive/refs/tags/v0.0.3.tar.gz"
+class Tsmanager < Formula
+  desc "hirokazuk/timestamp_manager"
+  homepage "https://github.com/hirokazuk/timestamp_manager"
+  url "https://github.com/hirokazuk/timestamp_manager/archive/refs/tags/v0.0.1.tar.gz"
   #sha256 "eace63da50fe1079ed9c7c830b2b03804431b9344acd7bf468f723994b7aecdc"
   license ""
 
-  depends_on "csvq"
+  depends_on "hirokazuk/homebrew-tap/kvcommands"
 
   #skip_clean 'bin'
 

@@ -7,6 +7,7 @@ class Kvcommands < Formula
   url "https://github.com/hirokazuk/kv_commands/archive/refs/tags/v0.0.3.tar.gz"
   #sha256 "eace63da50fe1079ed9c7c830b2b03804431b9344acd7bf468f723994b7aecdc"
   license ""
+  head "https://github.com/hirokazuk/kv_commands.git", branch: "main"
 
   depends_on "csvq"
 

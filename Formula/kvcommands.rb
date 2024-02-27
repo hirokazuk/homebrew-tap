@@ -1,7 +1,7 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class KVCommands < Formula
+class Kvcommands < Formula
   desc "kvcommands"
   homepage ""
   url "https://github.com/hirokazuk/kv_commands/archive/refs/tags/v0.0.1.tar.gz"

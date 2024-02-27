@@ -30,8 +30,8 @@ class Convertcomic < Formula
     #bin.install "bin/testecho.sh" => "testecho"
     #prefix.install Dir['bin/*']
     #prefix.install Dir['*']
-    prefix.install Dir['bin/*']
-    prefix.install Dir['ConvertComic.workflow/*']
+    prefix.install 'bin'
+    prefix.install 'ConvertComic.workflow'
     # bin.install Dir['bin/*.sh']
     #bin.install 'bin/testecho.sh'
     #prefix.install 'bin'

@@ -5,7 +5,7 @@
 class Convertcomic < Formula
   desc "hirokazuk/convertComic"
   homepage "https://github.com/hirokazuk/convertComic"
-  url "https://github.com/hirokazuk/convertComic/archive/refs/tags/v0.0.1.tar.gz"
+  url "https://github.com/hirokazuk/convertComic/archive/refs/tags/v0.0.2.tar.gz"
   #sha256 ""
   license ""
   head "https://github.com/hirokazuk/convertComic.git", branch: "main"
@@ -18,6 +18,8 @@ class Convertcomic < Formula
   depends_on "findutils"
   depends_on "imagemagick"
   depends_on "rename"
+  depends_on "tag"
+  
   depends_on "hirokazuk/homebrew-tap/tsmanager"
 
   #skip_clean 'bin'
@@ -31,7 +33,8 @@ class Convertcomic < Formula
     #prefix.install Dir['bin/*']
     #prefix.install Dir['*']
     prefix.install 'bin'
-    prefix.install 'ConvertComic.workflow'
+    #prefix.install 'ConvertComic.workflow'
+    system "open", "./ConvertComic.workflow"
     # bin.install Dir['bin/*.sh']
     #bin.install 'bin/testecho.sh'
     #prefix.install 'bin'

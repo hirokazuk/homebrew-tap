@@ -5,7 +5,7 @@
 class Convertcomic < Formula
   desc "hirokazuk/convertComic"
   homepage "https://github.com/hirokazuk/convertComic"
-  url "https://github.com/hirokazuk/convertComic/archive/refs/tags/v0.0.3.tar.gz"
+  url "https://github.com/hirokazuk/convertComic/archive/refs/tags/v0.0.4.tar.gz"
   #sha256 ""
   license ""
   head "https://github.com/hirokazuk/convertComic.git", branch: "main"
@@ -19,6 +19,12 @@ class Convertcomic < Formula
   depends_on "imagemagick"
   depends_on "rename"
   depends_on "tag"
+
+  depends_on "nkf"
+  depends_on "jq"
+  depends_on "csvq"
+  depends_on "watch"
+  
   
   depends_on "hirokazuk/homebrew-tap/tsmanager"
 

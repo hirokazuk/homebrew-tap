@@ -1,12 +1,16 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
+OWNER="hirokazuk"
+REPO="myshellutils"
+VERSION="0.0.10"
 class Myshellutils < Formula
-  desc "myshellutils"
-  homepage ""
-  url "https://github.com/hirokazuk/myshellutils/archive/refs/tags/v0.0.10.tar.gz"
-  #sha256 "eace63da50fe1079ed9c7c830b2b03804431b9344acd7bf468f723994b7aecdc"
-  license ""
+  desc "#{OWNER}/#{REPO}"
+  homepage "https://github.com/#{OWNER}/#{REPO}"
+  url "https://github.com/#{OWNER}/#{REPO}/archive/refs/tags/v#{VERSION}.tar.gz"
+  #sha256 ""
+  license "private"
+  head "https://github.com/#{OWNER}/#{REPO}.git", branch: "main"
 
   # depends_on "cmake" => :build
 

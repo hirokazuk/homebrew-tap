@@ -2,13 +2,16 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
+OWNER="hirokazuk"
+REPO="convertComic"
+VERSION="0.0.4"
 class Convertcomic < Formula
-  desc "hirokazuk/convertComic"
-  homepage "https://github.com/hirokazuk/convertComic"
-  url "https://github.com/hirokazuk/convertComic/archive/refs/tags/v0.0.4.tar.gz"
+  desc "#{OWNER}/#{REPO}"
+  homepage "https://github.com/#{OWNER}/#{REPO}"
+  url "https://github.com/#{OWNER}/#{REPO}/archive/refs/tags/v#{VERSION}.tar.gz"
   #sha256 ""
-  license ""
-  head "https://github.com/hirokazuk/convertComic.git", branch: "main"
+  license "private"
+  head "https://github.com/#{OWNER}/#{REPO}.git", branch: "main"
 
   depends_on "moreutils" #use ts
   depends_on "pueue"

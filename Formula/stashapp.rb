@@ -4,19 +4,24 @@
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 OWNER="stashapp"
 REPO="stash"
-VERSION="0.0.1"
+VERSION="0.25.0"
 class Stashapp < Formula
   desc "#{OWNER}/#{REPO}"
   homepage "https://github.com/#{OWNER}/#{REPO}"
-  #url "https://github.com/#{OWNER}/#{REPO}/archive/refs/tags/v#{VERSION}.tar.gz"
-  url "https://github.com/stashapp/stash/releases/download/v0.25.0/stash-macos"
+  url "https://github.com/#{OWNER}/#{REPO}/releases/download/v#{VERSION}/stash-macos"
   #sha256 ""
   license "private"
-  head "https://github.com/#{OWNER}/#{REPO}.git", branch: "main"
+  #head "https://github.com/#{OWNER}/#{REPO}.git", branch: "main"
+
+  head do
+    url "https://github.com/stashapp/stash/releases/download/latest_develop/stash-macos"
+  end
+
+  def install
+    bin.install "stash-macos" => "stash"
+  end
 
 
-  # def install
-  # end
 
   test do
     # `test do` will create, run in and delete a temporary directory.
@@ -28,6 +33,6 @@ class Stashapp < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "false"
+    system "stash" , "--version"
   end
 end

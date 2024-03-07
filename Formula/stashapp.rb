@@ -15,8 +15,8 @@ class Stashapp < Formula
   head "https://github.com/#{OWNER}/#{REPO}.git", branch: "main"
 
 
-  def install
-  end
+  # def install
+  # end
 
   test do
     # `test do` will create, run in and delete a temporary directory.

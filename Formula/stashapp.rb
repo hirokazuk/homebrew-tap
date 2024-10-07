@@ -6,13 +6,14 @@ OWNER="stashapp"
 REPO="stash"
 VERSION="0.26.2"
 class Stashapp < Formula
-  desc "#{OWNER}/#{REPO} @1"
+  desc "#{OWNER}/#{REPO} @2"
   homepage "https://github.com/#{OWNER}/#{REPO}"
   puts "HOMEBREW_STASHAPP_VERSION: #{ENV["HOMEBREW_STASHAPP_VERSION"]}"
   if ENV["HOMEBREW_STASHAPP_VERSION"]
     puts "Using version #{ENV["HOMEBREW_STASHAPP_VERSION"]}"
     version ENV["HOMEBREW_STASHAPP_VERSION"]
   else
+    odie "HOMEBREW_STASHAPP_VERSION is not set. Please set it to the version you want to install."
     puts "Using version #{VERSION}"
     version VERSION
   end

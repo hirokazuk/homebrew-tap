@@ -8,14 +8,20 @@ VERSION="0.26.2"
 class Stashapp < Formula
   desc "#{OWNER}/#{REPO}"
   homepage "https://github.com/#{OWNER}/#{REPO}"
+  if ENV["STASHAPP_VERSION"]
+    version ENV["STASHAPP_VERSION"]
+  else
+    version VERSION
+  end
   url "https://github.com/#{OWNER}/#{REPO}/releases/download/v#{VERSION}/stash-macos"
-  version VERSION
+
   #sha256 ""
   license "private"
   #head "https://github.com/#{OWNER}/#{REPO}.git", branch: "main"
 
   head do
     url "https://github.com/stashapp/stash/releases/download/latest_develop/stash-macos"
+    version "latest_develop"
   end
 
   def install

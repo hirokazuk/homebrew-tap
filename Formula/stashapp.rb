@@ -6,7 +6,7 @@ OWNER="stashapp"
 REPO="stash"
 VERSION="0.26.2"
 class Stashapp < Formula
-  desc "#{OWNER}/#{REPO}"
+  desc "#{OWNER}/#{REPO} @1"
   homepage "https://github.com/#{OWNER}/#{REPO}"
   if ENV["STASHAPP_VERSION"]
     version ENV["STASHAPP_VERSION"]

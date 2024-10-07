@@ -9,8 +9,10 @@ class Stashapp < Formula
   desc "#{OWNER}/#{REPO} @1"
   homepage "https://github.com/#{OWNER}/#{REPO}"
   if ENV["STASHAPP_VERSION"]
+    puts "Using version #{ENV["STASHAPP_VERSION"]}"
     version ENV["STASHAPP_VERSION"]
   else
+    puts "Using version #{VERSION}"
     version VERSION
   end
   url "https://github.com/#{OWNER}/#{REPO}/releases/download/v#{version}/stash-macos"

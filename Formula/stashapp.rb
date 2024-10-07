@@ -8,6 +8,7 @@ VERSION="0.26.2"
 class Stashapp < Formula
   desc "#{OWNER}/#{REPO} @1"
   homepage "https://github.com/#{OWNER}/#{REPO}"
+  puts "STASHAPP_VERSION: #{ENV["STASHAPP_VERSION"]}"
   if ENV["STASHAPP_VERSION"]
     puts "Using version #{ENV["STASHAPP_VERSION"]}"
     version ENV["STASHAPP_VERSION"]

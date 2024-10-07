@@ -1,27 +1,33 @@
-
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 OWNER="stashapp"
 REPO="stash"
 VERSION="0.26.2"
+
 class Stashapp < Formula
   desc "#{OWNER}/#{REPO}"
   homepage "https://github.com/#{OWNER}/#{REPO}"
   url "https://github.com/#{OWNER}/#{REPO}/releases/download/v#{VERSION}/stash-macos"
   #sha256 ""
   license "private"
-  #head "https://github.com/#{OWNER}/#{REPO}.git", branch: "main"
+
+  option "with-version", "Specify version to install"
 
   head do
     url "https://github.com/stashapp/stash/releases/download/latest_develop/stash-macos"
   end
 
   def install
+    if build.with? "version"
+      version = ARGV.value("with-version")
+      url = "https://github.com/#{OWNER}/#{REPO}/releases/download/v#{version}/stash-macos"
+      curl_download url, to: "stash-macos"
+    end
+    
     bin.install "stash-macos" => "stash"
   end
 
   test do
-    system "stash" , "--version"
+    system "stash", "--version"
   end
 end

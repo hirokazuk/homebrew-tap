@@ -13,7 +13,7 @@ class Stashapp < Formula
   else
     version VERSION
   end
-  url "https://github.com/#{OWNER}/#{REPO}/releases/download/v#{VERSION}/stash-macos"
+  url "https://github.com/#{OWNER}/#{REPO}/releases/download/v#{version}/stash-macos"
 
   #sha256 ""
   license "private"

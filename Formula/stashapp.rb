@@ -18,7 +18,7 @@ class Stashapp < Formula
   end
   url "https://github.com/#{OWNER}/#{REPO}/releases/download/v#{version}/stash-macos"
 
-  #sha256 ""
+  sha256 ""
   license "private"
   #head "https://github.com/#{OWNER}/#{REPO}.git", branch: "main"
 

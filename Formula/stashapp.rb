@@ -11,15 +11,15 @@ class Stashapp < Formula
   #sha256 ""
   license "private"
 
-  option "with-version", "Specify version to install"
+  option "with-target-version", "Specify version to install"
 
   head do
     url "https://github.com/stashapp/stash/releases/download/latest_develop/stash-macos"
   end
 
   def install
-    if build.with? "version"
-      version = ARGV.value("with-version")
+    if build.with? "target-version"
+      version = ARGV.value("with-target-version")
       url = "https://github.com/#{OWNER}/#{REPO}/releases/download/v#{version}/stash-macos"
       curl_download url, to: "stash-macos"
     end

@@ -4,7 +4,7 @@
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 OWNER="stashapp"
 REPO="stash"
-VERSION="0.27.2"
+VERSION="0.28.0"
 class Stashapp < Formula
   desc "#{OWNER}/#{REPO} @2"
   homepage "https://github.com/#{OWNER}/#{REPO}"

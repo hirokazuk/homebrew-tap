@@ -6,6 +6,7 @@ OWNER="stashapp"
 REPO="stash"
 VERSION="0.29.3"
 class Stashapp < Formula
+  VERSION=ENV["STASHAPP_DEVEL_VERSION"] || VERSION
   desc "#{OWNER}/#{REPO} @2"
   homepage "https://github.com/#{OWNER}/#{REPO}"
   # puts "HOMEBREW_STASHAPP_VERSION: #{ENV["HOMEBREW_STASHAPP_VERSION"]}"
@@ -18,16 +19,11 @@ class Stashapp < Formula
   #   version VERSION
   # end
   url "https://github.com/#{OWNER}/#{REPO}/releases/download/v#{VERSION}/stash-macos"
-
+  version VERSION
+  
   sha256 ""
   license "private"
   #head "https://github.com/#{OWNER}/#{REPO}.git", branch: "main"
-
-  devel do
-    VERSION=ENV["STASHAPP_DEVEL_VERSION"] || VERSION
-    url "https://github.com/stashapp/stash/releases/download/v#{VERSION}/stash-macos"
-    version VERSION
-  end
 
   head do
     url "https://github.com/stashapp/stash/releases/download/latest_develop/stash-macos"

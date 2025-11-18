@@ -7,7 +7,7 @@ REPO="stash"
 VERSION=ENV["STASHAPP_DEVEL_VERSION"] || "0.29.3"
 class Stashapp < Formula
   puts "VERSION: #{VERSION}"
-  desc "#{OWNER}/#{REPO} @3"
+  desc "#{OWNER}/#{REPO} @4"
   homepage "https://github.com/#{OWNER}/#{REPO}"
   # puts "HOMEBREW_STASHAPP_VERSION: #{ENV["HOMEBREW_STASHAPP_VERSION"]}"
   # if ENV["HOMEBREW_STASHAPP_VERSION"]
